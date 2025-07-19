@@ -8,8 +8,8 @@ import { toast } from "react-toastify";
 const API_KEY = import.meta.env.VITE_API_KEY_FIREBASE
 const firebaseConfig = {
   apiKey: API_KEY,
-  authDomain: "neflixclone-a9363.firebaseapp.com",
-  projectId: "neflixclone-a9363",
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
   storageBucket: "neflixclone-a9363.firebasestorage.app",
   messagingSenderId: "987360019133",
   appId: "1:987360019133:web:6ab26352ad3a3047a9add4",
