@@ -10,12 +10,14 @@ function Carousel() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  const API_KEY = import.meta.env.VITE_API_KEY
+
   const fetchMoviesData = async() => {
     const options = {
       method: 'GET',
       headers: {
         accept: 'application/json',
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiODUyMDJhZWE3MWIyY2MzYWI1OWZhNGUyZTgyMGIxZiIsIm5iZiI6MTc0NjA1ODkwNC40ODEsInN1YiI6IjY4MTJiZTk4OTFhYmZmNzliZjkwZmQ4MSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.QcpFUhBU2NTdZc_rBIb4x6pXjRX5kAw0yPR9Rl_beJM'
+        Authorization: `Bearer ${API_KEY}`
       }
     };
 
